@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050505"><meta name="apple-mobile-web-app-capable" content="yes">
+<title>Trading AI — V4 Engine</title><link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+<header><div class="brand">TRADING AI</div><div class="sub">10 AGENTS • REAL MARKET • DEMO ENGINE</div></header>
+<main>
+<section class="modebar"><button id="demoBtn" class="active">DEMO</button><button id="readBtn">LIVE READONLY</button><span id="connection" class="status">● connecting</span></section>
+<section class="stats"><div><small>EQUITY</small><strong id="equity">€50.00</strong><span id="sessionPnl" class="muted">P&L €0.00</span></div><div><small>TRADES</small><strong id="trades">0</strong></div><div><small>WIN RATE</small><strong id="winrate">—</strong></div></section>
+<section class="chartbox"><div class="charthead"><span>BTC/USDT • 1M CANDLES</span><span id="price">—</span></div><canvas id="chart"></canvas><div class="marketMeta"><span id="candleStatus">Caricamento storico…</span><span id="lastUpdate">—</span></div></section>
+<section class="controls">
+<label>Mercato<select id="symbol"><option value="btcusdt">BTC/USDT</option><option value="ethusdt">ETH/USDT</option><option value="solusdt">SOL/USDT</option><option value="xrpusdt">XRP/USDT</option></select></label>
+<label>Capitale demo<input id="capital" type="number" min="10" step="1" value="50"></label>
+<button id="start" class="primary">AVVIA BOT</button><button id="stop">STOP</button>
+</section>
+<section class="engine"><div><b>CONSENSO</b><span id="consensus">WAIT 0/10</span></div><div><b>RISKGUARDIAN</b><span id="guardian">STANDBY</span></div><div><b>STATO</b><span id="engineState">FERMO</span></div><div><button id="diagnostic">TEST ENGINE</button></div></section>
+<section class="agents"><h2>10 AGENTI REALI</h2><div id="agentGrid"></div></section>
+<section class="positions"><h2>POSIZIONE DEMO</h2><div id="positions">Nessuna posizione</div></section>
+<section class="trades"><div class="sectionHead"><h2>STORICO TRADE</h2><button id="clearHistory">RESET STORICO</button></div><div id="feed"></div></section>
+</main><script src="app.js?v=4"></script>
+</body></html>
